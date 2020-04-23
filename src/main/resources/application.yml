@@ -16,18 +16,18 @@ spring:
           uri: http://localhost:8081
           predicates:
             - Path=/bookinfoes/**
-        - id: diagnosis
+        - id: rentalManagement
+          uri: http://localhost:8082
+          predicates:
+            - Path=/rentalManagements/**
+        - id: delivery
           uri: http://localhost:8083
           predicates:
-            - Path=/medicalRecords/**
+            - Path=/DeliveryManagements/**
         - id: lookup
           uri: http://localhost:8084
           predicates:
-            - Path=/reservationStats/**
-        - id: acceptance
-          uri: http://localhost:8085
-          predicates:
-            - Path=/financialManagements/**
+            - Path=/rentalStatuses/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -55,18 +55,18 @@ spring:
           uri: http://bookinfo:8080
           predicates:
             - Path=/bookinfoes/**
-        - id: diagnosis
-          uri: http://diagnosis:8080
+        - id: rentalManagement
+          uri: http://rentalManagements:8080
           predicates:
-            - Path=/medicalRecords/**
+            - Path=/rentalManagements/**
         - id: lookup
           uri: http://lookup:8080
           predicates:
-            - Path=/reservationStats/**
-        - id: acceptance
-          uri: http://acceptance:8080
+            - Path=/rentalStatuses/**
+        - id: delivery
+          uri: http://DeliveryManagement:8080
           predicates:
-            - Path=/financialManagements/**
+            - Path=/DeliveryManagements/**
       globalcors:
         corsConfigurations:
           '[/**]':
